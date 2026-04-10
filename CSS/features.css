@@ -23,7 +23,8 @@
   align-items: start;
 }
 .feature-card {
-  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
 }
 .feature-card:nth-child(2n) {
   transform: translateY(13.6rem);
@@ -31,8 +32,15 @@
 .feature-icon {
   width: 8rem;
   height: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
+.feature-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
 .feature-card-title {
   font-family: var(--title-font);
   color: var(--text-dark);
@@ -115,14 +123,15 @@
     padding-top: 3rem;
   }
 
-  .feature-icon {
-    width: 4rem;
-    height: 4rem;
-  }
+  @media (max-width: 480px) {
+    .feature-icon {
+      width: 5rem;
+      height: 5rem;
+    }
 
-  .feature-card-title {
-    font-size: 1.8rem;
-    line-height: 2.4rem;
+    .feature-card-title {
+      margin-top: 0;
+    }
   }
 
   .feature-card-desc {
