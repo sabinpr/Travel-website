@@ -176,3 +176,21 @@
   color: var(--text-gray);
   margin-left: 0.5rem;
 }
+.splide__arrow {
+  padding: 1rem;
+  box-shadow: 0 0 1px var(--text-gray);
+  box-shadow: 0 0 2px var(--text-gray);
+  box-shadow: 0 0 4px var(--text-gray);
+}
+.splide__arrow--prev {
+  left: auto;
+  right: 7.5rem;
+}
+.left-arrow-testimonials {
+  transform: rotate(180deg);
+}
+.right-arrow-testimonials,
+.left-arrow-testimonials {
+  height: 2rem;
+  width: 2rem;
+}

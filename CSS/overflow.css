@@ -89,7 +89,7 @@
 }
 
 .style-text {
-  font-family: var(--body-font);
+  font-family: var(--extra-font);
   color: var(--text-dark);
   font-weight: 500;
   font-size: 1.6rem;

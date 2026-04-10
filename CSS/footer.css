@@ -25,7 +25,7 @@
   display: flex;
   flex-wrap: wrap; /* wraps on smaller screens */
   justify-content: center;
-  gap: 2rem; /* spacing between links */
+  gap: 4rem; /* spacing between links */
 }
 
 .footer-nav li {
@@ -39,7 +39,7 @@
   width: 0.2rem;
   height: 6rem;
   background-color: var(--primary-green);
-  margin-left: 2rem;
+  margin-left: 4rem;
   transform: rotate(160deg);
 }
 
