@@ -69,9 +69,6 @@ body {
     --gap-side: 6rem;
     --gap-top-bottom: 6rem;
   }
-  html {
-    /* Tablet/Small Laptop: 1rem = 9px */
-  }
 
   body {
     font-size: 1.4rem; /* slightly smaller text */
