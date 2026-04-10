@@ -1,0 +1,228 @@
+/* ==============================
+   SPLIDE HERO BANNER
+============================== */
+.explore-banner {
+  width: 100%;
+  height: 100vh; /* full viewport height */
+  position: relative;
+  overflow: hidden;
+}
+
+.explore-banner .splide,
+.splide__track,
+.splide__list,
+.splide__slide {
+  height: 100%;
+}
+
+/* ==============================
+   BANNER SLIDE
+============================== */
+.banner-slide {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Banner image fills container */
+.banner-slide .banner-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+}
+
+/* Dark overlay above image */
+.banner-slide::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+/* Slide content above overlay */
+.slide-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+/* Banner Tag */
+.banner-tag {
+  font-family: var(--body-font);
+  font-weight: 600;
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
+  font-size: 1.6rem;
+}
+
+/* Banner Title */
+.banner-title {
+  font-family: var(--title-font);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+  font-size: 7rem;
+}
+
+/* Location section */
+.explore-location {
+  display: flex;
+  gap: 1rem;
+  margin-top: 8rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.location-icon {
+  width: 3rem;
+  height: 3rem;
+  flex-shrink: 0;
+}
+
+.location-text {
+  font-family: var(--body-font);
+  font-weight: 500;
+  color: #fff;
+  font-size: 1.6rem;
+}
+
+/* Map overlay */
+.map-overlay {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 4rem;
+}
+
+.map-overlay img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  opacity: 0.9;
+}
+/* Map overlay container remains relative */
+.map-overlay {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3rem; /* reduce bottom margin to make image visually smaller */
+  width: 20%; /* full width of container */
+  max-width: 30%; /* optional: limit max size */
+  z-index: 2;
+}
+
+/* Make image scale with container */
+.map-overlay img {
+  width: 100%; /* fill parent width */
+  height: auto; /* maintain aspect ratio */
+  display: block;
+  opacity: 0.9;
+  max-width: 100%; /* ensure it doesn’t overflow */
+}
+/* ==============================
+   RESPONSIVE
+============================== */
+@media (max-width: 1200px) {
+  .banner-tag {
+    font-size: 1.4rem;
+  }
+  .banner-title {
+    font-size: 5rem;
+  }
+  .map-overlay img {
+    max-width: 20rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .banner-tag {
+    font-size: 1.3rem;
+  }
+  .banner-title {
+    font-size: 4.5rem;
+  }
+  .explore-location {
+    margin-top: 3rem;
+    gap: 0.8rem;
+  }
+  .location-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  .location-text {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .explore-banner {
+    height: 50rem;
+  }
+  .banner-tag {
+    font-size: 1.1rem;
+  }
+  .banner-title {
+    font-size: 3.5rem;
+  }
+  .explore-location {
+    margin-top: 2rem;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .location-icon {
+    width: 2rem;
+    height: 2rem;
+  }
+  .location-text {
+    font-size: 1.2rem;
+  }
+  .map-overlay img {
+    max-width: 15rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .explore-banner {
+    height: 40rem;
+  }
+  .banner-tag {
+    font-size: 1rem;
+  }
+  .banner-title {
+    font-size: 2.5rem;
+  }
+  .explore-location {
+    margin-top: 1.5rem;
+    gap: 0.4rem;
+  }
+  .location-icon {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+  .location-text {
+    font-size: 1.1rem;
+  }
+  .map-overlay img {
+    max-width: 10rem;
+  }
+}

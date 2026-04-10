@@ -1,0 +1,52 @@
+.section-tag {
+  font-family: var(--body-font);
+  color: var(--primary-green);
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.section-heading {
+  font-family: var(--title-font);
+  color: var(--text-dark);
+  font-size: 5.2rem;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-top: 3rem;
+}
+
+.section-text {
+  font-family: var(--body-font);
+  color: var(--text-dark);
+  font-size: 2.1rem;
+  line-height: 2.8rem;
+  margin-top: 3rem;
+  max-width: 55rem;
+}
+
+.section-padding {
+  padding: var(--gap-top-bottom) 0;
+}
+
+.section-desc {
+  font-family: var(--extra-font);
+  font-weight: 400;
+  color: var(--text-dark);
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+  margin-top: 2rem;
+  /* max-width: 75ch; */
+  letter-spacing: 0;
+}
+
+.center-header {
+  text-align: center;
+}
+
+.text-center {
+  text-align: center;
+}
+.highlight {
+  color: var(--primary-green);
+}
