@@ -27,6 +27,26 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
+  const searchIcon = document.querySelector(".search-icon");
+  const searchModal = document.getElementById("searchModal");
+  const closeSearch = document.getElementById("closeSearch");
+
+  searchIcon.addEventListener("click", (e) => {
+    e.preventDefault();
+    searchModal.classList.add("active");
+  });
+
+  closeSearch.addEventListener("click", () => {
+    searchModal.classList.remove("active");
+  });
+
+  // close when clicking outside box
+  searchModal.addEventListener("click", (e) => {
+    if (e.target === searchModal) {
+      searchModal.classList.remove("active");
+    }
+  });
+
   new Splide("#explore-splide", {
     type: "loop",
     autoplay: true,
