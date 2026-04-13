@@ -58,7 +58,7 @@
 }
 
 .footer-nav a:hover {
-  color: var(--text-gray); /* accent color on hover */
+  color: var(--primary-green); /* accent color on hover */
   transform: translateY(-0.2rem); /* slight lift effect */
 }
 
@@ -100,6 +100,14 @@
   transition: color 0.3s ease;
   list-style: none;
 }
+.footer-links a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+.footer-links a:hover {
+  color: var(--primary-green);
+}
 
 .footer-column .contacts {
   font-family: var(--body-font);
@@ -107,6 +115,15 @@
   font-weight: 400;
   font-size: 3.2rem;
   line-height: 5.2rem;
+}
+
+.footer-column .contacts a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+.footer-column .contacts a:hover {
+  color: var(--primary-green);
 }
 
 .footer-reviews {

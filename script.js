@@ -1,18 +1,21 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const menuBtn = document.querySelector(".menu-icon");
-  const dropdown = document.querySelector(".dropdown");
+  const hamburger = document.getElementById("hamburger");
+  const sideMenu = document.getElementById("sideMenu");
+  const overlay = document.getElementById("overlay");
+  const closeMenu = document.getElementById("closeMenu");
 
-  menuBtn.addEventListener("click", (e) => {
-    e.preventDefault();
-    dropdown.classList.toggle("active");
+  hamburger.addEventListener("click", () => {
+    sideMenu.classList.add("active");
+    overlay.classList.add("active");
   });
 
-  document.addEventListener("click", (e) => {
-    // If click is NOT inside dropdown or menu button
-    if (!dropdown.contains(e.target) && !menuBtn.contains(e.target)) {
-      dropdown.classList.remove("active");
-    }
-  });
+  overlay.addEventListener("click", closeNav);
+  closeMenu.addEventListener("click", closeNav);
+
+  function closeNav() {
+    sideMenu.classList.remove("active");
+    overlay.classList.remove("active");
+  }
 
   const navbar = document.querySelector(".main-navigation");
   const hero = document.querySelector(".hero-section");

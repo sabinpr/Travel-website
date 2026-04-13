@@ -76,9 +76,9 @@ button {
 .btn-outline:hover {
   color: var(--white);
 }
-.btn-outline-dark:hover {
+/* .btn-outline-dark:hover {
   color: var(--text-dark);
-}
+} */
 
 .btn-outline.btn-tilted:hover::after {
   background: var(--text-gray);

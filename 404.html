@@ -30,22 +30,20 @@
 
         <ul class="nav-menu">
           <li class="nav-item">
-            <a href="./index.html#things-to-do" class="nav-link">
-              THINGS TO DO
-            </a>
+            <a href="#things-to-do" class="nav-link">THINGS TO DO</a>
           </li>
           <li class="nav-item">
-            <a href="./index.html#places" class="nav-link">PLACES TO GO</a>
+            <a href="#places" class="nav-link">PLACES TO GO</a>
           </li>
           <li class="nav-item">
-            <a href="./index.html#plan" class="nav-link">PLAN YOUR TRIP</a>
+            <a href="#plan" class="nav-link">PLAN YOUR TRIP</a>
           </li>
         </ul>
 
         <div class="nav-icons">
-          <a class="icon menu-icon" href="#" aria-label="Menu">
+          <div class="icon menu-icon" id="hamburger" aria-label="Menu">
             <img src="./images/Menu.svg" alt="menu" />
-          </a>
+          </div>
 
           <a class="icon search-icon" href="#">
             <img src="./images/Search.svg" />
@@ -58,19 +56,19 @@
           </a>
         </div>
       </div>
-
-      <!--  DROPDOWN HERE -->
-      <section class="dropdown">
-        <div class="container">
-          <div class="menu-dropdown">
-            <ul>
-              <li><a href="./index.html">Home</a></li>
-              <li><a href="./about.html">About</a></li>
-              <li><a href="./contact.html">Contact</a></li>
-            </ul>
-          </div>
+      <div class="side-menu" id="sideMenu">
+        <div class="side-menu-header">
+          <span class="close-btn" id="closeMenu">&times;</span>
         </div>
-      </section>
+
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="overlay" id="overlay"></div>
     </nav>
     <main>
       <section class="404">
@@ -99,18 +97,23 @@
           <div class="footer-column">
             <h4 class="footer-heading">DESTINATION</h4>
             <ul class="footer-links">
-              <li>Africa</li>
-              <li>Asia</li>
-              <li>Australasia</li>
-              <li>Europe</li>
-              <li>Latin America</li>
+              <li><a href="about:blank" target="_blank">Africa</a></li>
+              <li><a href="about:blank" target="_blank">Asia</a></li>
+              <li><a href="about:blank" target="_blank">Australasia</a></li>
+              <li><a href="about:blank" target="_blank">Europe</a></li>
+              <li><a href="about:blank" target="_blank">Latin America</a></li>
             </ul>
           </div>
           <div class="footer-column">
             <h4 class="footer-heading">CALL US</h4>
-            <p class="contacts">+1 (833) 123 456</p>
+            <p class="contacts">
+              <a href="tel:+1833123456">+1 (833) 123 456</a>
+            </p>
+
             <h4 class="footer-heading">EMAIL US</h4>
-            <p class="contacts">explore@travel.com</p>
+            <p class="contacts">
+              <a href="mailto:explore@travel.com">explore@travel.com</a>
+            </p>
           </div>
           <div class="footer-column">
             <div class="footer-reviews">
@@ -149,7 +152,9 @@
       <div class="footer-bottom">
         <div class="container footer-bottom-design">
           <p>© 2024 Tourist Board. All rights reserved.</p>
-          <img src="./images/logo.svg" alt="travel" />
+          <a href="./index.html">
+            <img src="./images/logo.svg" alt="travel" class="logo-img" />
+          </a>
           <ul class="terms-and-policies">
             <li><a href="#">Terms</a></li>
             <li><a href="#">Cookie Policy</a></li>
