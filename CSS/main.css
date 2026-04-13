@@ -2,7 +2,7 @@
   font-family: var(--body-font);
   color: var(--primary-green);
   text-transform: uppercase;
-  font-size: clamp(1.4rem, 1vw, 1.6rem);
+  font-size: clamp(1.4rem, 1.5vw, 1.6rem);
   font-weight: 600;
   line-height: 1;
 }
