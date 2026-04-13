@@ -87,4 +87,37 @@ document.addEventListener("DOMContentLoaded", function () {
       480: { perPage: 1 },
     },
   }).mount();
+
+  function fixFooterSeparators() {
+    const items = document.querySelectorAll(".footer-nav li");
+
+    // reset
+    items.forEach((el) => el.classList.remove("no-sep"));
+
+    let rowTop = items[0]?.getBoundingClientRect().top;
+    let lastInRow = items[0];
+
+    items.forEach((el, index) => {
+      const top = el.getBoundingClientRect().top;
+
+      // new row detected
+      if (top !== rowTop) {
+        // remove separator from previous row last item
+        lastInRow.classList.add("no-sep");
+
+        // update row tracker
+        rowTop = top;
+      }
+
+      lastInRow = el;
+
+      // last item overall
+      if (index === items.length - 1) {
+        el.classList.add("no-sep");
+      }
+    });
+  }
+
+  window.addEventListener("load", fixFooterSeparators);
+  window.addEventListener("resize", fixFooterSeparators);
 });

@@ -2,17 +2,10 @@
    SPLIDE HERO BANNER
 ============================== */
 .explore-banner {
-  width: 100%;
-  height: 100vh;
+  width: auto;
+  height: 75rem;
   position: relative;
   overflow: hidden;
-}
-
-.explore-banner .splide,
-.splide__track,
-.splide__list,
-.splide__slide {
-  height: 100%;
 }
 
 /* ==============================
@@ -20,8 +13,7 @@
 ============================== */
 .banner-slide {
   position: relative;
-  width: 100%;
-  height: 100%;
+  height: 75rem; /* ✅ desktop default */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -29,11 +21,10 @@
   overflow: hidden;
 }
 
-/* Banner image fills container */
+/* Banner image */
 .banner-slide .banner-img {
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -41,19 +32,16 @@
   z-index: 0;
 }
 
-/* Dark overlay above image */
+/* Dark overlay */
 .banner-slide::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1;
 }
 
-/* Slide content above overlay */
+/* Content wrapper */
 .slide-content {
   position: relative;
   z-index: 2;
@@ -62,39 +50,44 @@
   justify-content: center;
   text-align: center;
   color: #fff;
+
+  height: 100%;
 }
 
-/* Banner Tag */
+/* ==============================
+   TEXT STYLES
+============================== */
 .banner-tag {
   font-family: var(--body-font);
   font-weight: 600;
-  line-height: 1.1;
-  margin-bottom: 0.5rem;
   font-size: 1.6rem;
+  margin-bottom: 0.5rem;
 }
 
-/* Banner Title */
 .banner-title {
   font-family: var(--title-font);
   font-weight: 700;
+  font-size: 7rem;
   line-height: 1.2;
   margin-bottom: 2rem;
-  font-size: 7rem;
 }
 
-/* Location section */
+/* ==============================
+   LOCATION
+============================== */
 .explore-location {
   display: flex;
   gap: 1rem;
-  margin-top: 8rem;
-  flex-wrap: wrap;
   align-items: center;
+  flex-wrap: wrap;
+
+  margin-top: auto;
+  margin-bottom: 5rem;
 }
 
 .location-icon {
   width: 3rem;
   height: 3rem;
-  flex-shrink: 0;
 }
 
 .location-text {
@@ -104,131 +97,158 @@
   font-size: 1.6rem;
 }
 
-/* Map overlay */
+/* ==============================
+   MAP OVERLAY
+============================== */
+
 .map-overlay {
   position: relative;
   display: flex;
-  align-items: center;
   justify-content: center;
-  margin-bottom: 4rem;
+  align-items: center;
+
+  margin-top: 6rem;
+  margin-bottom: 3rem;
+
+  width: clamp(1rem, 24vw, 34rem); /* ✅ responsive width */
+  max-width: 100%;
+  z-index: 2;
 }
 
 .map-overlay img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
   display: block;
   opacity: 0.9;
 }
-/* Map overlay container remains relative */
-.map-overlay {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 3rem; /* reduce bottom margin to make image visually smaller */
-  width: 20%; /* full width of container */
-  max-width: 30%; /* optional: limit max size */
-  z-index: 2;
-}
 
-/* Make image scale with container */
-.map-overlay img {
-  width: 100%; /* fill parent width */
-  height: auto; /* maintain aspect ratio */
-  display: block;
-  opacity: 0.9;
-  max-width: 100%; /* ensure it doesn’t overflow */
-}
-
+/* ==============================
+   SPLIDE ARROWS
+============================== */
 .splide-explore .splide__arrow {
   background: transparent;
   height: 0;
   width: 0;
 }
+
 /* ==============================
    RESPONSIVE
 ============================== */
+
+/* Large screens */
 @media (max-width: 1200px) {
-  .banner-tag {
-    font-size: 1.4rem;
+  .explore-banner,
+  .banner-slide {
+    height: auto;
   }
+
   .banner-title {
     font-size: 5rem;
   }
-  .map-overlay img {
-    max-width: 20rem;
+  .map-overlay {
+    margin-top: 5rem;
+    margin-bottom: 2.5rem;
   }
 }
 
+/* Tablets */
 @media (max-width: 1024px) {
-  .banner-tag {
-    font-size: 1.3rem;
-  }
+  /* .explore-banner,
+  .banner-slide {
+    height: 60rem;
+  } */
+
   .banner-title {
     font-size: 4.5rem;
   }
-  .explore-location {
-    margin-top: 3rem;
-    gap: 0.8rem;
+
+  .banner-tag {
+    font-size: 1.3rem;
   }
+
+  .explore-location {
+    gap: 0.8rem;
+    margin-bottom: 4rem;
+  }
+
   .location-icon {
     width: 2.5rem;
     height: 2.5rem;
   }
+
   .location-text {
     font-size: 1.4rem;
   }
+  .map-overlay {
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+  }
 }
 
+/* Mobile */
 @media (max-width: 768px) {
-  .explore-banner {
+  /* .explore-banner,
+  .banner-slide {
     height: 50rem;
-  }
-  .banner-tag {
-    font-size: 1.1rem;
-  }
+  } */
+
   .banner-title {
     font-size: 3.5rem;
   }
-  .explore-location {
-    margin-top: 2rem;
-    flex-direction: column;
-    gap: 0.5rem;
+
+  .banner-tag {
+    font-size: 1.1rem;
   }
+
+  .explore-location {
+    gap: 0.5rem;
+    margin-bottom: 3rem;
+  }
+
   .location-icon {
     width: 2rem;
     height: 2rem;
   }
+
   .location-text {
     font-size: 1.2rem;
   }
-  .map-overlay img {
-    max-width: 15rem;
+  .map-overlay {
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
   }
 }
 
+/* Small mobile */
 @media (max-width: 480px) {
-  .explore-banner {
-    height: 40rem;
+  .explore-banner,
+  .banner-slide {
+    height: auto;
   }
-  .banner-tag {
-    font-size: 1rem;
-  }
+
   .banner-title {
     font-size: 2.5rem;
   }
-  .explore-location {
-    margin-top: 1.5rem;
-    gap: 0.4rem;
+
+  .banner-tag {
+    font-size: 1rem;
   }
+
+  .explore-location {
+    gap: 0.4rem;
+    margin-bottom: 2rem;
+  }
+
   .location-icon {
     width: 1.8rem;
     height: 1.8rem;
   }
+
   .location-text {
     font-size: 1.1rem;
   }
-  .map-overlay img {
-    max-width: 10rem;
+  .map-overlay {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
   }
 }
