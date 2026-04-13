@@ -79,12 +79,10 @@
 
   /* SPLIDE ARROWS: top-right inside container */
   .testimonials-slider .splide__arrow {
-    width: 3rem;
-    height: 3rem;
+    width: 4rem;
+    height: 4rem;
     background-color: transparent; /* removed background */
     border-radius: 50%;
-    color: var(--text-dark);
-    font-size: 1.5rem;
   }
 }
 
@@ -176,17 +174,17 @@
   color: var(--text-gray);
   margin-left: 0.5rem;
 }
-.splide__arrow {
+.testimonials-slider .splide__arrow {
   padding: 1rem;
   box-shadow: 0 0 1px var(--text-gray);
   box-shadow: 0 0 2px var(--text-gray);
   box-shadow: 0 0 4px var(--text-gray);
 }
-.splide__arrow--prev {
+.testimonials-slider .splide__arrow--prev {
   left: auto;
   right: 7.5rem;
 }
-.left-arrow-testimonials {
+.left-arrow-rotate {
   transform: rotate(180deg);
 }
 .right-arrow-testimonials,

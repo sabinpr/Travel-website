@@ -132,7 +132,7 @@
   }
 
   .story-item {
-    width: 60%; /* two items per row */
+    width: 80%; /* two items per row */
     margin: 2rem auto; /* center each item */
   }
 

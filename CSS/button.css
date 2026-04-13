@@ -33,7 +33,7 @@ button {
   border: none;
 }
 .btn-primary-i {
-  padding: 1.1rem 2.9rem 1.1rem 4rem;
+  padding: 1.1rem 4rem 1.1rem 2.9rem;
   border: none;
 }
 .btn-primary-i::after {

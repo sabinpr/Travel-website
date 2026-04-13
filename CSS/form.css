@@ -171,3 +171,76 @@
     transform: scale(1.2);
   }
 }
+
+/* ==============================
+   Responsive Design
+============================== */
+
+/* Large tablets (<= 992px) */
+@media (max-width: 992px) {
+  .form-row {
+    justify-content: center;
+  }
+
+  .input-data,
+  .input-data-check {
+    flex: 1 1 45%; /* 2 per row */
+    max-width: 45%;
+  }
+}
+
+/* Tablets (<= 768px) */
+@media (max-width: 768px) {
+  .newsletter-form-wrapper {
+    padding: 5rem 2rem 8rem;
+  }
+
+  .form-row {
+    gap: 1.5rem;
+  }
+
+  .input-data,
+  .input-data-check {
+    flex: 1 1 100%; /* stack */
+    max-width: 100%;
+  }
+
+  .input-data input {
+    font-size: 1.6rem;
+  }
+
+  .input-data label {
+    font-size: 1.6rem;
+  }
+  .newsletter-form {
+    gap: 2rem;
+  }
+  .form-row {
+    gap: 2rem;
+  }
+}
+
+/* Mobile (<= 480px) */
+@media (max-width: 480px) {
+  .newsletter-form-wrapper {
+    padding: 4rem 1.5rem 6rem;
+  }
+
+  .input-data,
+  .input-data-check {
+    height: 3.5rem;
+  }
+
+  .input-data input {
+    font-size: 1.4rem;
+  }
+
+  .input-data label {
+    font-size: 1.4rem;
+  }
+
+  /* Checkbox text smaller */
+  .checkbox-wrapper-15 .cbx span {
+    font-size: 1.4rem;
+  }
+}
