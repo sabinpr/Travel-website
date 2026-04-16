@@ -13,7 +13,7 @@
 /* Tablet */
 @media (max-width: 1024px) {
   .places-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .place-card {
