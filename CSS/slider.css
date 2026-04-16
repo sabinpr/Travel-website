@@ -110,8 +110,8 @@
   margin-top: 6rem;
   margin-bottom: 3rem;
 
-  width: clamp(1rem, 24vw, 34rem); /* ✅ responsive width */
-  max-width: 100%;
+  width: 50%;
+  max-width: 34rem;
   z-index: 2;
 }
 

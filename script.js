@@ -20,15 +20,17 @@ document.addEventListener("DOMContentLoaded", function () {
   const navbar = document.querySelector(".main-navigation");
   const hero = document.querySelector(".hero-section");
 
-  window.addEventListener("scroll", () => {
-    const heroHeight = hero.offsetHeight;
+  if (hero && navbar) {
+    window.addEventListener("scroll", () => {
+      const heroBottom = hero.getBoundingClientRect().bottom;
 
-    if (window.scrollY > heroHeight - 100) {
-      navbar.classList.add("sticky");
-    } else {
-      navbar.classList.remove("sticky");
-    }
-  });
+      if (heroBottom <= 0) {
+        navbar.classList.add("sticky");
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    });
+  }
 
   const searchIcon = document.querySelector(".search-icon");
   const searchModal = document.getElementById("searchModal");
@@ -59,7 +61,6 @@ document.addEventListener("DOMContentLoaded", function () {
     arrows: true,
     pagination: true,
     cover: true,
-    heightRatio: 0.6,
   }).mount();
 
   // STYLE CARD SLIDER
@@ -91,7 +92,6 @@ document.addEventListener("DOMContentLoaded", function () {
   function fixFooterSeparators() {
     const items = document.querySelectorAll(".footer-nav li");
 
-    // reset
     items.forEach((el) => el.classList.remove("no-sep"));
 
     let rowTop = items[0]?.getBoundingClientRect().top;
@@ -100,18 +100,13 @@ document.addEventListener("DOMContentLoaded", function () {
     items.forEach((el, index) => {
       const top = el.getBoundingClientRect().top;
 
-      // new row detected
-      if (top !== rowTop) {
-        // remove separator from previous row last item
+      if (Math.abs(top - rowTop) > 2) {
         lastInRow.classList.add("no-sep");
-
-        // update row tracker
         rowTop = top;
       }
 
       lastInRow = el;
 
-      // last item overall
       if (index === items.length - 1) {
         el.classList.add("no-sep");
       }

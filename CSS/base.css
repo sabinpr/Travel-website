@@ -42,7 +42,6 @@ body {
   -webkit-font-smoothing: antialiased; /* Chrome, Safari, Edge */
   -moz-osx-font-smoothing: grayscale; /* Firefox */
   text-rendering: optimizeLegibility;
-  overflow-x: hidden;
 }
 
 .container {
@@ -79,7 +78,7 @@ body {
 @media (max-width: 768px) {
   :root {
     --gap-side: 3rem;
-    --gap-top-bottom: 4rem;
+    --gap-top-bottom: 5rem;
   }
   html {
     font-size: 56.25%;
@@ -93,8 +92,8 @@ body {
 /* Small mobile / phones */
 @media (max-width: 480px) {
   :root {
-    --gap-side: 2rem;
-    --gap-top-bottom: 3rem;
+    --gap-side: 3rem;
+    --gap-top-bottom: 5rem;
   }
   html {
     font-size: 50%;

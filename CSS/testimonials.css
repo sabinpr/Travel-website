@@ -112,8 +112,9 @@
 ============================= */
 .splide__slide.testimonial-card {
   margin-top: 2rem;
+  margin-bottom: 3rem;
   background: #fff;
-  padding: 2rem;
+  padding: 1rem;
   border-radius: 1rem;
   box-shadow: none;
   max-width: 100%;
@@ -191,4 +192,24 @@
 .left-arrow-testimonials {
   height: 2rem;
   width: 2rem;
+}
+
+@media (max-width: 768px) {
+  .big-stars {
+    gap: 1rem;
+  }
+  .splide__slide.testimonial-card {
+    padding: 0;
+  }
+}
+
+/* Change color of all dots */
+.splide__pagination__page {
+  background: var(--text-gray);
+}
+
+/* Change color of the active dot */
+.splide__pagination__page.is-active {
+  background: var(--primary-green);
+  transform: scale(1.4); /* Make active dot larger */
 }

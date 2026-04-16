@@ -1,12 +1,23 @@
 /* ==============================
    MAIN NAVIGATION
 ============================== */
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
 .main-navigation {
   position: relative;
   z-index: 100;
 
   background: var(--white);
   width: 100%;
+  transition:
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
 }
 .main-navigation.sticky {
   position: fixed;
@@ -14,8 +25,15 @@
   left: 0;
   width: 100%;
   z-index: 999;
+  animation: slideDown 0.3s ease forwards;
+  box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.08);
 }
-
+body.nav-active {
+  padding-top: 10rem; /* match navbar height */
+}
+.overflow-contain {
+  overflow: hidden;
+}
 .nav-container {
   display: flex;
   align-items: center;

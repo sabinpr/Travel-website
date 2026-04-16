@@ -21,39 +21,45 @@
   </head>
   <body>
     <nav class="main-navigation">
-      <div class="container nav-container">
-        <div class="nav-brand">
-          <a href="./index.html">
-            <img src="./images/logo_green.svg" alt="travel" class="nav-logo" />
-          </a>
-        </div>
-
-        <ul class="nav-menu">
-          <li class="nav-item">
-            <a href="#things-to-do" class="nav-link">THINGS TO DO</a>
-          </li>
-          <li class="nav-item">
-            <a href="#places" class="nav-link">PLACES TO GO</a>
-          </li>
-          <li class="nav-item">
-            <a href="#plan" class="nav-link">PLAN YOUR TRIP</a>
-          </li>
-        </ul>
-
-        <div class="nav-icons">
-          <div class="icon menu-icon" id="hamburger" aria-label="Menu">
-            <img src="./images/Menu.svg" alt="menu" />
+      <div class="overflow-contain">
+        <div class="container nav-container">
+          <div class="nav-brand">
+            <a href="./index.html">
+              <img
+                src="./images/logo_green.svg"
+                alt="travel"
+                class="nav-logo"
+              />
+            </a>
           </div>
 
-          <a class="icon search-icon" href="#">
-            <img src="./images/Search.svg" />
-          </a>
-          <a class="icon heart-icon" href="#">
-            <img src="./images/Heart.svg" />
-          </a>
-          <a class="icon account-icon" href="#">
-            <img src="./images/User.svg" />
-          </a>
+          <ul class="nav-menu">
+            <li class="nav-item">
+              <a href="#things-to-do" class="nav-link">THINGS TO DO</a>
+            </li>
+            <li class="nav-item">
+              <a href="#places" class="nav-link">PLACES TO GO</a>
+            </li>
+            <li class="nav-item">
+              <a href="#plan" class="nav-link">PLAN YOUR TRIP</a>
+            </li>
+          </ul>
+
+          <div class="nav-icons">
+            <div class="icon menu-icon" id="hamburger" aria-label="Menu">
+              <img src="./images/Menu.svg" alt="menu" />
+            </div>
+
+            <a class="icon search-icon" href="#">
+              <img src="./images/Search.svg" />
+            </a>
+            <a class="icon heart-icon" href="#">
+              <img src="./images/Heart.svg" />
+            </a>
+            <a class="icon account-icon" href="#">
+              <img src="./images/User.svg" />
+            </a>
+          </div>
         </div>
       </div>
       <div class="side-menu" id="sideMenu">
@@ -163,6 +169,16 @@
         </div>
       </div>
     </footer>
+    <div class="search-modal" id="searchModal">
+      <div class="search-box">
+        <form>
+          <input type="text" placeholder="Search your destination..." />
+          <button type="submit">Search</button>
+        </form>
+
+        <span class="close-search" id="closeSearch">&times;</span>
+      </div>
+    </div>
     <script src="./script.js"></script>
   </body>
 </html>

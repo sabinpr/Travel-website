@@ -4,7 +4,7 @@
 
 .places-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 37rem));
+  grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
   gap: 3rem;
   justify-content: center;
   padding: 4rem 0 0 0;
@@ -27,20 +27,20 @@
 @media (max-width: 600px) {
   .places-grid {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 1rem;
     padding: 2rem 0 0 0;
   }
 
   .place-card {
-    max-width: 35rem; /* smaller than full width */
-    height: auto; /* auto height */
+    max-width: 100%; /* smaller than full width */
+    height: 28rem; /* auto height */
     margin: 1rem auto; /* center horizontally */
   }
 
   .place-card img {
     width: 100%;
     height: auto; /* scale proportionally */
-    object-fit: contain; /* do not cut image */
+    object-fit: cover; /* do not cut image */
   }
 
   .place-card-content {
