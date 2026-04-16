@@ -115,11 +115,6 @@
 /* SMALL MOBILE */
 /* ========================= */
 @media (max-width: 480px) {
-  .features-grid {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
-  }
-
   .features-cards {
     padding-top: 3rem;
   }

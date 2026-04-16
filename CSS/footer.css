@@ -81,7 +81,7 @@
    FOOTER MAIN GRID
 ============================== */
 .footer-main {
-  padding: 8rem 0;
+  padding: 8rem 0 12rem 0;
 }
 
 .footer-grid {
@@ -161,6 +161,7 @@
   height: 5rem;
   margin-top: 3rem;
   padding: 0 2rem;
+  max-width: 27rem;
 
   text-decoration: none;
   font-family: var(--body-font);
@@ -252,14 +253,23 @@
 }
 
 @media (max-width: 768px) {
+  .footer-main {
+    padding: 6rem 0 8rem 0;
+  }
   .footer-top {
     flex-direction: column;
     gap: 2rem;
   }
-
-  .social-links {
-    justify-content: center;
+  .footer-grid {
+    gap: 0;
   }
+  .footer-bottom {
+    padding-bottom: 4rem;
+  }
+
+  /* .social-links {
+    justify-content: center;
+  } */
 
   .footer-bottom-design {
     flex-direction: column;
