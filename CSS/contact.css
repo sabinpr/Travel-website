@@ -22,7 +22,6 @@
   font-size: 1.6rem;
   line-height: 1;
   margin-top: 2rem;
-  max-width: 55rem;
 }
 
 /* ==============================
@@ -80,8 +79,11 @@
 
   .contact-options {
     flex-wrap: wrap; /* allow wrap on tablet */
-    justify-content: flex-start;
+    justify-content: center;
     gap: 3rem;
+  }
+  .contact-text {
+    text-align: center;
   }
 }
 

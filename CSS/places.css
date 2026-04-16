@@ -4,7 +4,7 @@
 
 .places-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 3rem;
   justify-content: center;
   padding: 4rem 0 0 0;
@@ -13,18 +13,21 @@
 /* Tablet */
 @media (max-width: 1024px) {
   .places-grid {
-    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .place-card {
-    max-width: 28rem; /* limit card width */
     aspect-ratio: auto; /* height adjusts automatically */
     margin: 0 auto; /* center horizontally */
   }
 }
-
+@media (max-width: 768px) {
+  .places-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 /* Mobile */
-@media (max-width: 600px) {
+@media (max-width: 480px) {
   .places-grid {
     grid-template-columns: 1fr;
     gap: 1rem;

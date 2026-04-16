@@ -200,14 +200,14 @@ body.nav-active {
 /* Tablet */
 @media (max-width: 1200px) {
   .side-menu {
-    width: 28rem;
+    width: 45%;
   }
 }
 
 /* Mobile */
 @media (max-width: 768px) {
   .side-menu {
-    width: 75%; /* takes most of screen */
+    width: 50%; /* takes most of screen */
   }
 
   .side-menu a {
