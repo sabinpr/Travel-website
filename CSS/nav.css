@@ -81,7 +81,8 @@ body.nav-active {
   transition: color 0.2s;
 }
 
-.nav-link:hover {
+.nav-link:hover,
+.active {
   color: var(--primary-green);
 }
 

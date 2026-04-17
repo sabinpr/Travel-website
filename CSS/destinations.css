@@ -1,0 +1,60 @@
+.destination-section,
+.antient-section {
+  background: var(--bg-gray);
+}
+
+.antient-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.9fr;
+  gap: 3rem;
+  align-items: center;
+  max-width: auto;
+  margin: 0 auto;
+}
+
+.antient-images {
+  position: relative;
+  width: 100%;
+  max-width: 60rem; /* Adjust based on your layout */
+  height: 59rem; /* Give the container a height so the absolute images don't collapse */
+}
+
+/* Base styles for both images */
+.antient-images img {
+  position: absolute;
+  box-shadow: 0 1.5rem 3.5rem rgba(0, 0, 0, 0.2); /* Adds depth like the image */
+}
+
+/* The Reef (Background) */
+.reef-img {
+  width: 65%; /* Adjust size as needed */
+  top: 0;
+  right: 0;
+  z-index: 1; /* Places it behind the tiger */
+}
+
+/* The Tiger (Foreground/Tilted) */
+.tiger-img {
+  width: 58%; /* Adjust size as needed */
+  top: 11rem; /* Moves it down from the top */
+  left: 1rem;
+  z-index: 2; /* Places it on top */
+
+  /* THIS CREATES THE TILT */
+  transform: rotate(-4deg);
+
+  /* Keeps the image sharp while rotating */
+  backface-visibility: hidden;
+}
+
+/* Optional: Hover effect to make it interactive */
+.tiger-img:hover {
+  transform: rotate(0deg) scale(1.05);
+  transition: 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .antient-grid {
+    grid-template-columns: 1fr;
+  }
+}

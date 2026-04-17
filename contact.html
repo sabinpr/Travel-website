@@ -13,11 +13,19 @@
       href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
     />
     <link rel="stylesheet" href="./CSS/base.css" />
+    <link rel="stylesheet" href="./CSS/hero.css" />
+    <link rel="stylesheet" href="./CSS/button.css" />
     <link rel="stylesheet" href="./CSS/nav.css" />
     <link rel="stylesheet" href="./CSS/main.css" />
+    <link rel="stylesheet" href="./CSS/features.css" />
+    <link rel="stylesheet" href="./CSS/places.css" />
+    <link rel="stylesheet" href="./CSS/slider.css" />
+    <link rel="stylesheet" href="./CSS/overflow.css" />
+    <link rel="stylesheet" href="./CSS/stories.css" />
+    <link rel="stylesheet" href="./CSS/testimonials.css" />
+    <link rel="stylesheet" href="./CSS/bgoverlap.css" />
     <link rel="stylesheet" href="./CSS/form.css" />
-    <link rel="stylesheet" href="./CSS/button.css" />
-    <link rel="stylesheet" href="./CSS/about.css" />
+    <link rel="stylesheet" href="./CSS/contact.css" />
     <link rel="stylesheet" href="./CSS/footer.css" />
 
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
@@ -38,13 +46,15 @@
 
           <ul class="nav-menu">
             <li class="nav-item">
-              <a href="#things-to-do" class="nav-link">THINGS TO DO</a>
+              <a href="./things-to-do.html" class="nav-link">THINGS TO DO</a>
             </li>
             <li class="nav-item">
-              <a href="#places" class="nav-link">PLACES TO GO</a>
+              <a href="./places-to-go.html" class="nav-link">PLACES TO GO</a>
             </li>
             <li class="nav-item">
-              <a href="#plan" class="nav-link">PLAN YOUR TRIP</a>
+              <a href="./plan-your-trip.html" class="nav-link">
+                PLAN YOUR TRIP
+              </a>
             </li>
           </ul>
 
@@ -79,85 +89,46 @@
 
       <div class="overlay" id="overlay"></div>
     </nav>
-    <section class="contact">
-      <div class="container">
-        <h2 class="section-heading">
-          <span class="highlight">Contact</span> Us
-        </h2>
 
-        <p class="section-desc">
-          Have questions, suggestions, or need help planning your journey? We’d
-          love to hear from you. Reach out anytime.
-        </p>
-
-        <div class="contact-wrapper">
-          <!-- CONTACT INFO -->
-          <div class="contact-info">
-            <h3 class="section-subheading">Get in Touch</h3>
-
-            <p><i class="fa-solid fa-phone"></i> +1 (833) 123 456</p>
-            <p><i class="fa-solid fa-envelope"></i> explore@travel.com</p>
-            <p><i class="fa-solid fa-location-dot"></i> Kathmandu, Nepal</p>
+    <main>
+      <section class="contact-cta-section section-padding bg-accent">
+        <div class="container contact-grid">
+          <div class="contact-text">
+            <h2 class="section-heading">
+              <span class="highlight">Contact</span> A Travel Researcher
+            </h2>
+            <p>We always aim to reply within 24 hours.</p>
           </div>
-          <br /><br />
-          <!-- CONTACT FORM -->
-          <form action="#" class="newsletter-form">
-            <div class="form-row name-row">
-              <div class="input-data">
-                <input type="text" required />
-                <label for="">First Name</label>
-              </div>
-              <div class="input-data">
-                <input type="text" required />
-                <label for="">Last Name</label>
-              </div>
+          <div class="contact-options">
+            <div class="contact-option">
+              <img src="./images/Call.svg" alt="Call" />
+              <span class="option-label">Call Us</span>
+              <a href="tel:+18331234567" class="option-value">
+                +1 (833) 123-4567
+              </a>
             </div>
-
-            <div class="form-row email-row">
-              <div class="input-data">
-                <input type="text" required />
-                <label for="">Email Address</label>
-              </div>
-              <div class="input-data-check">
-                <div class="checkbox-wrapper-15">
-                  <input
-                    class="inp-cbx"
-                    id="cbx-15"
-                    type="checkbox"
-                    style="display: none"
-                  />
-                  <label class="cbx" for="cbx-15">
-                    <span>
-                      <svg width="12px" height="9px" viewbox="0 0 12 9">
-                        <polyline points="1 5 4 8 11 1"></polyline>
-                      </svg>
-                    </span>
-                    <span>I'm happy to receive emails*</span>
-                  </label>
-                </div>
-              </div>
+            <div class="contact-option">
+              <img src="./images/Email.svg" alt="Email" />
+              <span class="option-label option-email-gap">
+                <a href="mailto:explore@travel.com" class="option-value">
+                  Send Us An Enquiry
+                </a>
+              </span>
             </div>
-            <div class="submit-btn">
-              <div class="input-data">
-                <button type="submit" class="btn-tilted btn-outline-dark">
-                  Subscribe
-                </button>
-              </div>
-            </div>
-          </form>
+          </div>
         </div>
-        <br /><br /><br />
-      </div>
-    </section>
+      </section>
+    </main>
+
     <footer class="site-footer">
       <div class="footer-top border-bottom">
         <div class="container">
           <ul class="footer-nav">
             <li><a href="./index.html">HOME</a></li>
             <li><a href="./about.html">ABOUT</a></li>
-            <li><a href="./index.html#things-to-do">THINGS TO DO</a></li>
-            <li><a href="./index.html#places">PLACES TO GO</a></li>
-            <li><a href="./index.html#plan">PLAN YOUR TRIP</a></li>
+            <li><a href="./things-to-do.html">THINGS TO DO</a></li>
+            <li><a href="./places-to-go.html">PLACES TO GO</a></li>
+            <li><a href="./plan-your-trip.html">PLAN YOUR TRIP</a></li>
             <li><a href="./contact.html">CONTACT</a></li>
           </ul>
         </div>
@@ -207,13 +178,19 @@
             </div>
             <div class="social-links">
               <span class="social-icon">
-                <img src="./images/Facebook F.svg" alt="Facebook" />
+                <a href="about:blank" target="_blank">
+                  <img src="./images/Facebook F.svg" alt="Facebook" />
+                </a>
               </span>
               <span class="social-icon">
-                <img src="./images/Instagram.svg" alt="Instagram" />
+                <a href="about:blank" target="_blank">
+                  <img src="./images/Instagram.svg" alt="Instagram" />
+                </a>
               </span>
               <span class="social-icon">
-                <img src="./images/LinkedIn.svg" alt="LinkedIn" />
+                <a href="about:blank" target="_blank">
+                  <img src="./images/LinkedIn.svg" alt="LinkedIn" />
+                </a>
               </span>
             </div>
           </div>

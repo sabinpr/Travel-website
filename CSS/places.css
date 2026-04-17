@@ -104,13 +104,16 @@
   padding: 3rem;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
   color: var(--white);
+  transition: transform 0.4s ease;
 }
 
 .place-title {
   font-size: 2.4rem;
+  line-height: 2.8rem;
   font-weight: 500;
   margin-bottom: 0.8rem;
   font-family: var(--title-font);
+  text-transform: capitalize;
 }
 
 .place-text {

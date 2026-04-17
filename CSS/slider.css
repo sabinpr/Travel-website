@@ -3,7 +3,7 @@
 ============================== */
 .explore-banner {
   width: auto;
-  height: 75rem;
+  height: auto;
   position: relative;
   overflow: hidden;
 }
@@ -13,7 +13,7 @@
 ============================== */
 .banner-slide {
   position: relative;
-  height: 75rem; /* ✅ desktop default */
+  height: auto; /* ✅ desktop default */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -52,6 +52,10 @@
   color: #fff;
 
   height: 100%;
+}
+
+.banner-gap-bot {
+  padding-bottom: var(--gap-top-bottom);
 }
 
 /* ==============================

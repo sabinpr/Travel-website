@@ -12,8 +12,9 @@
   color: var(--text-dark);
   font-size: clamp(3.6rem, 4vw, 5.2rem);
   font-weight: 700;
-  line-height: 1.1;
+  line-height: 1;
   margin-top: 3rem;
+  text-transform: capitalize;
 }
 
 .section-text {
@@ -30,7 +31,7 @@
   font-weight: 400;
   color: var(--text-dark);
   font-size: clamp(1.6rem, 1.5vw, 1.8rem);
-  line-height: 1.7;
+  line-height: 2.8rem;
   margin-top: 2rem;
 }
 
@@ -39,7 +40,7 @@
 }
 
 .desc-width {
-  max-width: 80rem;
+  max-width: 83rem;
 }
 
 .center-header {

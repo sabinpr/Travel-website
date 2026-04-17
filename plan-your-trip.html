@@ -17,14 +17,8 @@
     <link rel="stylesheet" href="./CSS/button.css" />
     <link rel="stylesheet" href="./CSS/nav.css" />
     <link rel="stylesheet" href="./CSS/main.css" />
-    <link rel="stylesheet" href="./CSS/features.css" />
+    <link rel="stylesheet" href="./CSS/plans.css" />
     <link rel="stylesheet" href="./CSS/places.css" />
-    <link rel="stylesheet" href="./CSS/slider.css" />
-    <link rel="stylesheet" href="./CSS/overflow.css" />
-    <link rel="stylesheet" href="./CSS/stories.css" />
-    <link rel="stylesheet" href="./CSS/testimonials.css" />
-    <link rel="stylesheet" href="./CSS/bgoverlap.css" />
-    <link rel="stylesheet" href="./CSS/form.css" />
     <link rel="stylesheet" href="./CSS/contact.css" />
     <link rel="stylesheet" href="./CSS/footer.css" />
 
@@ -52,7 +46,7 @@
               <a href="./places-to-go.html" class="nav-link">PLACES TO GO</a>
             </li>
             <li class="nav-item">
-              <a href="./plan-your-trip.html" class="nav-link">
+              <a href="./plan-your-trip.html" class="nav-link active">
                 PLAN YOUR TRIP
               </a>
             </li>
@@ -91,6 +85,167 @@
     </nav>
 
     <main>
+      <section class="plan-section-head">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag"> plan your trip </span>
+            <h2 class="section-heading">
+              Explore Slovenia in your <br />
+              <span class="highlight">own way</span>
+            </h2>
+            <p class="section-desc desc-width">
+              Slovenia has so many beautiful places, attractions and experiences
+              that you may find yourself wondering what to visit and experience
+              during your visit. Let us help you.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="overlapping-bg">
+        <div class="container">
+          <img src="./images/rv.png" alt="Van" />
+        </div>
+      </section>
+      <section class="planning-form section-padding">
+        <div class="container text-center">
+          <div class="section-header">
+            <h2 class="section-heading remove-margin-top">
+              Build Your <span class="highlight">itinerary</span>
+            </h2>
+            <p class="section-desc">
+              Design your day-to-day itinerary. Select the destinations you want
+              to visit and when you <br />
+              are planning to visit them.
+            </p>
+          </div>
+          <div class="plan-form-wrapper">
+            <form action="#" method="POST" class="plan-form">
+              <!-- DESTINATION -->
+              <div class="form-group">
+                <label for="destination">Destination</label>
+                <input
+                  type="text"
+                  id="destination"
+                  name="destination"
+                  placeholder="Enter destination"
+                  required
+                />
+                <a href="#" class="add-link">+ Add destination</a>
+              </div>
+
+              <!-- DATE RANGE -->
+              <div class="form-group">
+                <label>Date Range</label>
+                <div class="row">
+                  <input
+                    type="date"
+                    name="start_date"
+                    placeholder="Start date"
+                    required
+                  />
+                  <input
+                    type="date"
+                    name="end_date"
+                    placeholder="End date"
+                    required
+                  />
+                </div>
+              </div>
+
+              <!-- GUESTS + ACTIVITIES -->
+              <div class="row">
+                <div class="form-group field">
+                  <label for="guests">Guests</label>
+                  <select id="guests" name="guests" required>
+                    <option value="2">2 adults</option>
+                    <option value="1">1 adult</option>
+                    <option value="3">3 adults</option>
+                    <option value="4">4 adults</option>
+                  </select>
+                </div>
+
+                <div class="form-group field">
+                  <label for="activities">Activities Preferences</label>
+                  <select id="activities" name="activities" required>
+                    <option value="popular">Popular</option>
+                    <option value="adventure">Adventure</option>
+                    <option value="culture">Culture</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- SUBMIT -->
+              <div class="form-actions">
+                <button type="submit" class="button primary-btn">
+                  SEE YOUR TRIP
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+      <section class="plan-ideas section-padding">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-heading remove-margin-top">
+              <span class="highlight">Fresh Ideas</span> at your fingertips
+            </h2>
+            <p class="section-desc desc-width">
+              Wherever the path may lead you in the future, you will always find
+              something to make your heart sing. The greatest Slovenian
+              treasures await. How will you feel Slovenia?
+            </p>
+          </div>
+          <div class="places-grid">
+            <div class="place-card plan-card">
+              <a href="#">
+                <img src="./images/piran.png" alt="Piran And Salt Pans" />
+              </a>
+              <div class="place-card-content">
+                <h3 class="place-title">14 days in Slovenia Itinerary</h3>
+                <p class="place-text">BY A USER FROM SPAIN</p>
+              </div>
+              <div class="hover-details">
+                <p>Preference : August</p>
+                <p>Attraction Style : Popular sights</p>
+                <p>Pace : Medium</p>
+              </div>
+            </div>
+            <div class="place-card plan-card">
+              <a href="#">
+                <img src="./images/postojna.png" alt="Postojna Cave" />
+              </a>
+
+              <div class="place-card-content">
+                <h3 class="place-title">14 days in Slovenia Itinerary</h3>
+                <p class="place-text">BY A USER FROM ITALY</p>
+              </div>
+              <div class="hover-details">
+                <p>Preference : August</p>
+                <p>Attraction Style : Popular sights</p>
+                <p>Pace : Medium</p>
+              </div>
+            </div>
+            <div class="place-card plan-card">
+              <a href="#">
+                <img src="./images/bled.png" alt="Bled" />
+              </a>
+
+              <div class="place-card-content">
+                <div class="place-card-content">
+                  <h3 class="place-title">14 days in Slovenia Itinerary</h3>
+                  <p class="place-text">BY A USER FROM SPAIN</p>
+                </div>
+                <div class="hover-details">
+                  <p>Preference : August</p>
+                  <p>Attraction Style : Popular sights</p>
+                  <p>Pace : Medium</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <section class="contact-cta-section section-padding bg-accent">
         <div class="container contact-grid">
           <div class="contact-text">
