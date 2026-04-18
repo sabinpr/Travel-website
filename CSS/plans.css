@@ -157,7 +157,22 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .plan-card:hover .place-card-content {
   top: 1rem;
 }
+.section-width-plan {
+  max-width: 78rem;
+  margin: 2rem auto;
+}
 /* Responsive adjustments */
+
+@media (max-width: 1024px) {
+  .plan-form-wrapper {
+    margin-top: 4rem;
+  }
+}
+@media (max-width: 768px) {
+  .plan-form-wrapper {
+    margin-top: 3rem;
+  }
+}
 @media (max-width: 480px) {
   .row {
     flex-direction: column;

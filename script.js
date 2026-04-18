@@ -4,30 +4,34 @@ document.addEventListener("DOMContentLoaded", function () {
   const overlay = document.getElementById("overlay");
   const closeMenu = document.getElementById("closeMenu");
 
-  hamburger.addEventListener("click", () => {
-    sideMenu.classList.add("active");
-    overlay.classList.add("active");
-  });
-
-  overlay.addEventListener("click", closeNav);
-  closeMenu.addEventListener("click", closeNav);
-
-  function closeNav() {
-    sideMenu.classList.remove("active");
-    overlay.classList.remove("active");
+  // ===== NAV TOGGLE =====
+  if (hamburger && sideMenu && overlay) {
+    hamburger.addEventListener("click", () => {
+      sideMenu.classList.add("active");
+      overlay.classList.add("active");
+    });
   }
 
+  function closeNav() {
+    if (sideMenu) sideMenu.classList.remove("active");
+    if (overlay) overlay.classList.remove("active");
+  }
+
+  if (overlay) overlay.addEventListener("click", closeNav);
+  if (closeMenu) closeMenu.addEventListener("click", closeNav);
+
+  // ===== STICKY NAV =====
   const navbar = document.querySelector(".main-navigation");
   const hero = document.querySelector(".hero-section");
 
-  if (hero && navbar) {
+  if (navbar) {
     window.addEventListener("scroll", () => {
-      const heroBottom = hero.getBoundingClientRect().bottom;
-
-      if (heroBottom <= 0) {
-        navbar.classList.add("sticky");
+      if (hero) {
+        const heroBottom = hero.getBoundingClientRect().bottom;
+        navbar.classList.toggle("sticky", heroBottom <= 0);
       } else {
-        navbar.classList.remove("sticky");
+        const navTop = navbar.getBoundingClientRect().top;
+        navbar.classList.toggle("sticky", navTop <= 0);
       }
     });
   }
