@@ -228,6 +228,37 @@
   line-height: clamp(2.4rem, 3vw, 3.4rem);
   letter-spacing: 0%;
 }
+.overview-banner-section {
+  padding-bottom: clamp(4rem, 5vw, 6rem);
+  padding-top: 35rem;
+}
+.overview-section-tag {
+  font-family: var(--body-font);
+  font-weight: 600;
+  font-size: 1.6rem;
+  color: var(--white);
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+}
+.overview-section-heading {
+  font-family: var(--title-font);
+  font-weight: 700;
+  font-size: 3.2rem;
+  color: var(--white);
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-transform: capitalize;
+  margin: 1.5rem 0;
+}
+.overview-section-desc {
+  font-family: var(--extra-font);
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+  letter-spacing: 0%;
+  color: var(--white);
+}
 @media (max-width: 1028px) {
   .timeline-grid {
     grid-template-columns: 1fr 1fr;
