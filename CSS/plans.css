@@ -47,6 +47,9 @@ label {
 /* Input & Select Fields */
 input[type="text"],
 input[type="date"],
+input[type="email"],
+input[type="tel"],
+textarea,
 select {
   width: 100%;
   padding: 1.1rem 2rem;
@@ -59,6 +62,7 @@ select {
   box-sizing: border-box; /* Ensures padding doesn't break width */
   appearance: none; /* Removes default arrows to allow custom ones */
   -webkit-appearance: none;
+  background: var(--bg-gray);
 }
 
 /* Add custom icons for dates and selects */
