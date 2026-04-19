@@ -20,8 +20,8 @@
   /* RIGHT: slider 2/3 */
   .testimonials-slider {
     margin-top: 4rem;
-    flex: 0 0 67%;
-    max-width: 67%;
+    flex: 0 0 64%;
+    max-width: 64%;
     position: relative; /* arrows stay inside */
   }
 

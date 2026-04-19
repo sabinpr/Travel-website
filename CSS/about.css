@@ -1,36 +1,107 @@
-.section-subheading {
-  font-family: var(--title-font);
-  color: var(--text-dark);
-  font-size: 2.1rem;
-  font-weight: 500;
-  line-height: 2.8rem;
-  letter-spacing: 0;
-  margin-top: 1rem;
+.about-head-section {
+  background: var(--bg-gray);
+  padding-bottom: clamp(3rem, 4vw, 6rem);
+  padding-top: var(--gap-top-bottom);
+}
+.about-video-section {
+  background: linear-gradient(to bottom, var(--bg-gray) 50%, var(--white) 50%);
+}
+/* wrapper must control positioning */
+.about-video-wrapper {
+  position: relative;
 }
 
-.about-list {
-  font-family: var(--body-font);
+/* image */
+.about-video-wrapper img {
+  width: 100%;
+  display: block;
+}
+
+/* overlay container */
+.video-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.about-description-wrapper {
+  max-width: 79rem;
+  margin: clamp(3rem, 4vw, 6rem) auto var(--gap-top-bottom);
+}
+
+.about-description-wrapper p {
+  font-family: var(--extra-font);
+  color: var(--text-dark);
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+  margin-bottom: 2.8rem;
+}
+
+.book-us-section {
+  background: var(--bg-gray);
+}
+
+.book-us-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.book-us-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin-top: 4rem;
+}
+.book-us-card h3 {
+  font-family: var(--title-font);
+  color: var(--text-dark);
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+  letter-spacing: 0;
+  margin-bottom: 1rem;
+}
+.book-us-card p {
+  font-family: var(--extra-font);
   color: var(--text-dark);
   font-weight: 400;
   font-size: 1.6rem;
-  line-height: 2.4rem;
-  list-style: none;
+  line-height: 2.6rem;
+  letter-spacing: 0;
+}
+.book-us-images {
+  position: relative;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
 }
 
-.contact-info p {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  font-size: 1.6rem;
-  margin-bottom: 1.5rem;
-  color: #333;
-  line-height: 1.5;
-  margin-top: 1.5rem;
+/* make both images responsive */
+.book-us-images img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
-.contact-info i {
-  font-size: 1.8rem;
-  color: var(--primary-green);
-  min-width: 2rem;
-  text-align: center;
+/* base image (reef) */
+.reef-img {
+  width: min(37rem, 100%);
+  height: auto;
+}
+
+/* overlay image (tiger) */
+.tiger-img {
+  width: min(30rem, 70%);
+  height: auto;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+@media (max-width: 768px) {
+  .book-us-grid {
+    grid-template-columns: 1fr;
+  }
 }
