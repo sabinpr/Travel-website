@@ -112,9 +112,9 @@
 }
 
 /* Hover effect for a little extra polish */
-.book-us-images:hover .tiger-img {
+/* .book-us-images:hover .tiger-img {
   transform: rotate(0deg) scale(1.02);
-}
+} */
 
 @media (max-width: 768px) {
   .book-us-grid {

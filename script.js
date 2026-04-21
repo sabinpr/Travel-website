@@ -25,13 +25,25 @@ document.addEventListener("DOMContentLoaded", function () {
   const hero = document.querySelector(".hero-section");
 
   if (navbar) {
+    const navHeight = navbar.offsetHeight; // Get height of nav
+
     window.addEventListener("scroll", () => {
+      let isSticky = false;
+
       if (hero) {
         const heroBottom = hero.getBoundingClientRect().bottom;
-        navbar.classList.toggle("sticky", heroBottom <= 0);
+        isSticky = heroBottom <= 0;
       } else {
-        const navTop = navbar.getBoundingClientRect().top;
-        navbar.classList.toggle("sticky", navTop <= 0);
+        isSticky = window.scrollY > 0;
+      }
+
+      navbar.classList.toggle("sticky", isSticky);
+
+      // Apply padding to body to prevent the "jump"
+      if (isSticky) {
+        document.body.style.paddingTop = `${navHeight}px`;
+      } else {
+        document.body.style.paddingTop = `0px`;
       }
     });
   }

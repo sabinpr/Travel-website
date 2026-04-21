@@ -53,7 +53,6 @@ select {
   line-height: 2.8rem;
   font-weight: 400;
   border: 1px solid #e1e1e1;
-  /* border-radius: 4px; */
   color: var(--text-dark);
   box-sizing: border-box; /* Ensures padding doesn't break width */
   appearance: none; /* Removes default arrows to allow custom ones */
@@ -176,5 +175,30 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 @media (max-width: 480px) {
   .row {
     flex-direction: column;
+  }
+}
+
+.section-header {
+  position: relative; /* Acts as the anchor for the image */
+  z-index: 1; /* Creates a layering context */
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.header-bg-swash {
+  position: absolute;
+  top: 0; /* Adjust to move up/down */
+  left: -2rem; /* Adjust to move left/right */
+  width: clamp(15rem, 16.5vw, 18rem);
+  height: 18rem;
+  height: auto;
+  z-index: -1; /* This pushes it BEHIND the text */
+  opacity: 1; /* Optional: makes it look more like a background element */
+  pointer-events: none; /* Prevents the image from being clickable/selecting text */
+}
+
+@media (max-width: 480px) {
+  .header-bg-swash {
+    left: -6rem;
   }
 }
