@@ -178,7 +178,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   }
 }
 
-.section-header {
+.plan-header {
   position: relative; /* Acts as the anchor for the image */
   z-index: 1; /* Creates a layering context */
   max-width: 80rem;
